@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree&family=Inter&family=Overlock+SC&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="main">
+
+        <h1 class="price hover-underline-animation">CRYPTOCURRENCIES PRICE </h1>
+
+        <form action="" method="post">
+            <div>
+                <label for="coins" class="label">Select Coin : </label>
+                <select name="coins" id="coins" class="CoinSelect">
+                    <option value="bitcoin">Bitcoin</option>
+                    <option value="ethereum">Ethereum</option>
+                    <option value="tether">Tether</option>
+                    <option value="binancecoin">BNB</option>
+                    <option value="ripple">XRP</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="currency" class="label">Select Currency : </label>
+                <select name="currency" id="currency" class="CurrencySelect">
+                    <option value="pkr">Rupee</option>
+                    <option value="usd">US Dollar</option>
+                    <option value="eur">Euros</option>
+                    <option value="jpy">Japanese Yen</option>
+                    <option value="kwd">Kuwaiti Dinar</option>
+                </select>
+            </div>
+
+            <% if (locals.error) { %>
+                <input type="submit" class="submit-btn" formaction="/get-price" style="cursor: no-drop;">
+            <%} else { %>
+                <input type="submit" class="submit-btn" formaction="/get-price" >
+            <%} %>
+
+        </form>
+
+        <div class="result">
+            <% if (locals.data) { %>
+                <p class="data">Coin : <%= coin %>
+                </p>
+                <p class="data">Price: <%= data[coin][price] %>
+                    <%= currency %>
+                </p>
+            <%} %>
+
+            <% if (locals.error) { %>
+                <p style="color: #E74C3C;">error</p>
+            <%} %>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url(../images/106893887-1623167512779-bitcoin-digital-crypto-currency-with-stock-market-candlesticks-on-computer-screen-rltheis_t20_W7xVwY.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Overlock SC', sans-serif;
+}
+
+.price {
+    color: white;
+    font-size: 90px;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+label {
+    color: #D3E3FD;
+}
+
+select {
+    padding: 5px 10px;
+    background: transparent;
+    color: #F8BF1E;
+    border: 1px solid #F8BF1E;
+}
+
+select :focus {
+    outline: none;
+}
+
+option {
+    color: black;
+    background: transparent;
+}
+
+form {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.result {
+    width: 600px;
+    padding: 20px 20px;
+    margin-top: 70px;
+    background: rgba(1, 22, 41, 0.6);
+    border: none;
+    /* background-color: #011629; */
+    min-height: 80px;
+    border: #F8BF1E 1px solid;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.submit-btn {
+    border: 1px solid #F8BF1E;
+    padding: 5px 20px;
+    border-radius: 0px;
+    margin-left: 20px;
+    cursor: pointer;
+    font-family: 'Overlock SC', sans-serif;
+    font-size: 17px;
+    transition: 0.4s;
+    background-color: #011629;
+    color: #F8BF1E;
+    font-weight: 600;
+}
+
+.submit-btn:hover {
+    background-color: #D9A421;
+    color: #011629;
+
+    transition: 0.4s;
+}
+
+.data {
+    color: #F8BF1E;
+}
+
+.CoinSelect {
+    background-color: #011629;
+    border: 1px solid #F8BF1E;
+    font-family: 'Overlock SC', sans-serif;
+    font-size: 16px;
+    transition: 0.4s;
+
+}
+
+.CoinSelect>option {
+    color: #F8BF1E;
+    transition: 0.4s;
+}
+
+.CurrencySelect {
+    background-color: #011629;
+    border: 1px solid #F8BF1E;
+    font-family: 'Overlock SC', sans-serif;
+    font-size: 16px;
+    transition: 0.4s;
+
+}
+
+form>select {
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+form>select>option {
+    padding: 12px 0;
+    text-indent: 15px;
+    -moz-transition: all 0.15s ease-in;
+    -o-transition: all 0.15s ease-in;
+    -webkit-transition: all 0.15s ease-in;
+    transition: all 0.15s ease-in;
+}
+
+.CurrencySelect>option {
+    color: #F8BF1E;
+    transition: 0.4s;
+}
+
+.CoinSelect:focus {
+    outline: none;
+}
+
+.CurrencySelect:focus {
+    outline: none;
+}
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: #F8BF1E;
+}
+
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    background-color: #F8BF1E;
+    border-radius: 50px;
+    transform-origin: bottom;
+    transition: 0.4s;
+}
+
+.hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.label {
+    color: #ffd152;
+}
+
+
+
+@media (max-width: 768px) {
+    .main {
+        padding-top: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .result {
+        width: 90%;
+    }
+
+    form {
+        width: 90%;
+        flex-direction: column !important;
+    }
+
+    form>div {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    select {
+        width: 120px;
+        padding: 3px 7px;
+    }
+
+    label {
+        font-size: 13px;
+    }
+
+    .price {
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .submit-btn {
+        margin-left: 0px;
+        margin-top: 15px;
+    }
+}
